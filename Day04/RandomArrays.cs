@@ -15,6 +15,16 @@ namespace Day04
             return Enumerable.Range(startValue, count).ToArray();
         }
 
+        public static int[] GetOneValueArray(int value, int count)
+        {
+            if (count < 1)
+            {
+                throw new ArgumentException($"{nameof(count)} cannot be less than 1.");
+            }
+
+            return Enumerable.Repeat(value, count).ToArray();
+        }
+
         public static int[] NumbersWithDigit(byte digit, int count)
         {
             int[] array = new int[count];
